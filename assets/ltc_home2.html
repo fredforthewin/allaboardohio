@@ -12,22 +12,32 @@
 </head>
   
   <body>
-    <header>
+    <header id="header">
       <div>
-        <a href="#" class="button">Read more</a><!-- button or link label -->
-        <a href="mailto:office@careerfoundry.com" class="button contact">Send me an email</a>
-
         <img src="https://placehold.co/100x100" alt="placeholder logo image">
+      </div>
+
+      <div>
         <nav>
             <ul>
             <li><a href="ltc_home2.html">Home</a></li>
+          </ul>
+            <ul>
             <li><a href="about.html#myskills">My Skills</a></li>
+          </ul>  
+            <ul>
             <li><a href="project1.html">Work</a></li>
+            </ul>
+            <ul>
             <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
       </div>
     </header>
+    
+    <a href="#" class="button">Read more</a><!-- button or link label -->
+    <a href="mailto:office@careerfoundry.com" class="button contact">Send me an email</a>
+
     <!-- Hero Section -->
   <section id="hero">
     <h1>Welcome to My Coding Practice</h1>
@@ -36,8 +46,11 @@
 
   <!-- First Content Section -->
   <section id="content1">
-    <img src="https://placehold.co/600x400" alt="placeholder image">
-    <div>Here's some words. I might even use fancy words if I get the chance. Maybe even a picture.</div>
+    <picture>
+      <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">
+      <img src="http://via.placeholder.com/800x600" alt="My Image">
+    </picture>
+    <p>Here's some words. I might even use fancy words if I get the chance. Maybe even a picture.</p>
   </section>
 
   <!-- Second Content Section -->
@@ -74,7 +87,7 @@
   </section>    
 
 <section id="cv">
-    <a href="files/cv.pdf" download>Download my CV</a>
+    <a href="files/cv.pdf" class="button">Download my CV</a>
 </section>
 
 <footer id="Contact">
