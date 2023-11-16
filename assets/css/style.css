@@ -8,120 +8,136 @@ Text On Background Color (Black): #020123;
 Text On Primary Color (Grey): #f7f8fc;
 */
 
-.blue {color: #2b3a86}
-.white {color: #fafbfc}
-.red {color: #8a0000}
-.teal {color: #46979c}
-.onprimary {color: #f7f8fc}
-.onbackground {color: #fafbfc}
+.blue {
+  color: #2b3a86;
+}
+.white {
+  color: #fafbfc;
+}
+.red {
+  color: #8a0000;
+}
+.teal {
+  color: #46979c;
+}
+.onprimary {
+  color: #f7f8fc;
+}
+.onbackground {
+  color: #fafbfc;
+}
 
 body {
-
   width: 50em;
   margin-left: auto;
   margin-right: auto;
-  
 
-    font-family: 'Rosario', sans-serif;
-        background-color: #ffffff;
-        font-size: 16px; /* Sets the font size to 16px */
-        font-weight: 300; /* Sets the font weight to 300 */
-        line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-        color: #020123;
+  font-family: "Rosario", sans-serif;
+  background-color: #fafbfc;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #020123;
+}
 
-      h1, h2, h3, h4 {
-        line-height: 1.4;
-      }
-      h1 {
-        font-size: 2.75em;
-        font-weight: 700;
-      }
-      
-      h2 {
-        font-size: 2.25em;
-        font-weight: 700;
-      }
-      
-      h3 {
-        font-size: 1.75em;
-        font-weight: 400;
-      }
-      h4 {
-        font-size: 1.35em;
-        font-weight: 400;
-      }
-  }
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
 
-  img {
-    width: 100%;
-  }
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
 
-  a {
-    color: purple; 
-    text-decoration: none; /* No underlining */
-  }
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
 
-  a:visited { /* visited link */
-    color: #C4D1EC;
-  }
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
 
-  a:hover,
-  a:focus {
-    color: #5267B2;
-    text-decoration: underline; /* Underlining when focusing or hovering over a link */
-  }
- 
-  a:active { /* selected link */
-    color: #0C1248;
-  }
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
 
-  .button {
-    display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-    background-color: #2b3a86;
-    color: #f7f8fc; /* needed to override the default link color */
-    font-weight: 400;
-    padding: 16px 8px;
-    border-radius: 3px;
-    border-bottom: 2px solid #0C1248; /* width of the border, type, color */
-    transition: 0.2s opacity;
-  }
+img {
+  width: 100%;
+}
 
-  .button:hover {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
-  }
+a {
+  color: purple;
+  text-decoration: none; /* No underlining */
+}
 
-  .button.contact {
-    background-color: #2b3a86;
-    color: #f7f8fc;
-    text-transform: uppercase;
-    border: 2px solid #2b3a86;
-  }
+a:visited {
+  /* visited link */
+  color: #c4d1ec;
+}
 
-  .button.contact:hover {
-    background-color: #0C1248;
-    color: #f7f8fc;
-  }
+a:hover,
+a:focus {
+  color: #5267b2;
+  text-decoration: underline; /* Underlining when focusing or hovering over a link */
+}
 
+a:active {
+  /* selected link */
+  color: #0c1248;
+}
 
-  div {
-    width: auto;
-    border: 1px solid #c3c3c3;
-    display: inline-block;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin:auto;
-    padding: 80px;
-    
-  }
-  
-  img {
-    max-width: 500px;
-    max-height: fit-content;
-    align-self: center;
-    margin: auto;
-  }
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #2b3a86;
+  color: #f7f8fc; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 16px 8px;
+  border-radius: 3px;
+  border-bottom: 2px solid #0c1248; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
 
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: #2b3a86;
+  color: #f7f8fc;
+  text-transform: uppercase;
+  border: 2px solid #2b3a86;
+}
+
+.button.contact:hover {
+  background-color: #0c1248;
+  color: #f7f8fc;
+}
+
+div {
+  width: auto;
+  border: 1px solid #c3c3c3;
+  display: inline-block;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: auto;
+  padding: 80px;
+}
+
+img {
+  max-width: 500px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  align-self: center;
+  margin: auto;
+}
 
 .header {
   width: 100%;
@@ -129,19 +145,29 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  margin:auto;
+  margin: auto;
 }
 
-nav {
+ul.a {
   width: 100%;
   border: 1px solid #c3c3c3;
   display: inline;
   flex-wrap: nowrap;
   align-content: center;
-  margin:auto;
+  margin: auto;
 }
 
-.hero .content1 .content2 .myskills .research .ideation .wireframe .design .prototype .conclusion .contact {
+.hero
+  .content1
+  .content2
+  .myskills
+  .research
+  .ideation
+  .wireframe
+  .design
+  .prototype
+  .conclusion
+  .contact {
   width: auto;
   border: 1px solid #c3c3c3;
   display: flex;
@@ -150,6 +176,6 @@ nav {
   padding: 40px;
   align-items: center;
   margin: 40px auto;
-  background: #fafbfc  no-repeat fixed center;
-  place-items: center; 
+  background: #fafbfc no-repeat fixed center;
+  place-items: center;
 }
