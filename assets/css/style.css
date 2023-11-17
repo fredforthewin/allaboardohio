@@ -8,37 +8,32 @@ Text On Background Color (Black): #020123;
 Text On Primary Color (Grey): #f7f8fc;
 */
 
-.blue {
-  color: #2b3a86;
+* {
+  box-sizing: border-box;
 }
-.white {
-  color: #fafbfc;
-}
-.red {
-  color: #8a0000;
-}
-.teal {
-  color: #46979c;
-}
-.onprimary {
-  color: #f7f8fc;
-}
-.onbackground {
-  color: #fafbfc;
+
+main {
+  padding-top: 400px;
 }
 
 body {
-  width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-
   font-family: "Rosario", sans-serif;
   background-color: #fafbfc;
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #020123;
+  display: block;
+  max-width: 1440px;
+  margin: 0 8px 0 8px; /* No spacing to top and bottom and auto spacing to left and right */
+  padding-top: 250px;
 }
+
+/* 
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+old code cut from body, delete this if not useful */
 
 h1,
 h2,
@@ -123,11 +118,10 @@ a:active {
 div {
   width: auto;
   border: 1px solid #c3c3c3;
-  display: inline-block;
   flex-wrap: wrap;
   align-content: space-around;
   margin: auto;
-  padding: 80px;
+  padding: 8px;
 }
 
 img {
@@ -139,15 +133,6 @@ img {
   margin: auto;
 }
 
-.header {
-  width: 100%;
-  border: 1px solid #c3c3c3;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  margin: auto;
-}
-
 ul.a {
   width: 100%;
   border: 1px solid #c3c3c3;
@@ -155,6 +140,24 @@ ul.a {
   flex-wrap: nowrap;
   align-content: center;
   margin: auto;
+}
+
+header {
+  background-color: #0c1248;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 3px solid #4a4a4a;
+  position: fixed;
+  width: 100%;
+  height: [object Object]px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #f8f8f8;
+  border: solid #bdbdbd 1px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero
@@ -168,14 +171,70 @@ ul.a {
   .prototype
   .conclusion
   .contact {
-  width: auto;
-  border: 1px solid #c3c3c3;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  padding: 40px;
-  align-items: center;
-  margin: 40px auto;
+  /* display: block;
+  border: 1px solid black;
+  padding: 4px 4px 4px 4px;
   background: #fafbfc no-repeat fixed center;
-  place-items: center;
+  margin: 4px 4px 4px 4px; */
+
+  width: auto;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: auto;
+  /* No spacing to top and bottom and auto spacing to left and right */
+}
+
+/* Layout styling */
+
+.container {
+  padding: 8px;
+  border: 8px solid purple;
+}
+
+.blog {
+  padding: 16px;
+  float: left;
+  background-color: #fafbfc;
+  color: #0c1248;
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+.footer {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; /* No spacing to top and bottom and auto spacing to left and right */
+  background-color: #0c1248;
+  color: #fafbfc;
+}
+
+#hero h1 h2 h3 h4 {
+  text-align: center;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+#hero {
+  background-color: #5267b2;
+}
+
+#cv {
+  text-align: center;
 }
