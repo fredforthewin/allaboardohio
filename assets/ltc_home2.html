@@ -20,8 +20,10 @@
 
   <body>
     <!-- Header -->
-    <header id="header" class="container">
-      <img src="http://via.placeholder.com/50x50" alt="logo" />
+    <header id="header" class="header">
+      <div class="logo">
+        <img src="http://via.placeholder.com/50x50" alt="logo" />
+      </div>
       <nav>
         <ul class="navigation">
           <li><a href="ltc_home2.html">Home</a></li>
@@ -32,16 +34,20 @@
       </nav>
     </header>
 
-    <!-- Buttons -->
-    <div>
-      <a href="#" class="button">Read more</a>
-      <a href="mailto:office@careerfoundry.com" class="button contact"
-        >Send me an email</a
-      >
-    </div>
-
     <!-- Hero Section -->
-    <div id="hero" class="container">
+    <div id="hero" class="hero">
+      <picture>
+        <source
+          srcset="
+            https://i.pinimg.com/564x/c6/e0/4d/c6e04daa02c89e5fb13a9b608241dfb4.jpg
+          "
+          type="image/jpeg"
+        />
+        <img
+          src="https://i.pinimg.com/564x/c6/e0/4d/c6e04daa02c89e5fb13a9b608241dfb4.jpg"
+          alt="Description of the image"
+        />
+      </picture>
       <h1>Welcome to My Coding Practice</h1>
       <h4>
         This is the hero section where you can add some introductory content.
@@ -80,16 +86,20 @@
     <!-- Content 2 -->
     <div id="content2" class="container">
       <div class="row">
-        <h3>And a three and a four.</h3>
-        <img
-          src="https://2870932.fs1.hubspotusercontent-na1.net/hub/2870932/hubfs/rccar-min.png?width=770&height=440&name=rccar-min.png"
-          alt="rc car"
-        />
-        <p>
-          Here's another section of content. Feel free to add more text, images,
-          or other elements.
-        </p>
-        <a href="#" class="button">Read more</a>
+        <div class="column">
+          <h3>And a three and a four.</h3>
+          <img
+            src="https://2870932.fs1.hubspotusercontent-na1.net/hub/2870932/hubfs/rccar-min.png?width=770&height=440&name=rccar-min.png"
+            alt="rc car"
+          />
+        </div>
+        <div class="column">
+          <p>
+            Here's another section of content. Feel free to add more text,
+            images, or other elements.
+          </p>
+          <a href="#" class="button">Read more</a>
+        </div>
       </div>
     </div>
 
@@ -116,6 +126,14 @@
     <!-- CV Link -->
     <div id="cv" class="container">
       <a href="files/cv.pdf" class="button">Download my CV</a>
+    </div>
+
+    <!-- Buttons -->
+    <div>
+      <a href="#" class="button">Read more</a>
+      <a href="mailto:office@careerfoundry.com" class="button contact"
+        >Send me an email</a
+      >
     </div>
 
     <!-- Footer -->

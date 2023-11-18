@@ -144,12 +144,13 @@ ul.a {
 
 header {
   background-color: #0c1248;
+  display: inline;
   padding: 10px;
   margin: 0;
   border-bottom: 3px solid #4a4a4a;
   position: fixed;
   width: 100%;
-  height: [object Object]px;
+  height: auto;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -188,7 +189,8 @@ header {
 
 .container {
   padding: 8px;
-  border: 8px solid purple;
+  border: 8px solid rgb(4, 154, 129);
+  margin: auto;
 }
 
 .blog {
@@ -199,7 +201,8 @@ header {
 }
 
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  display: flex;
+  margin: 25px 0;
 }
 
 .footer {
@@ -232,13 +235,33 @@ nav > ul > li > a {
 }
 
 #hero {
-  background-color: #5267b2;
+  background-color: #147082;
+  text-align: center;
+  color: #ccc;
 }
 
 #cv {
   text-align: center;
 }
 
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust as needed, e.g., space-around, space-evenly */
+  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
 .column {
-  display: inline-block;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  max-width: 150px;
 }
