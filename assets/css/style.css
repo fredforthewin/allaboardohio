@@ -238,3 +238,7 @@ nav > ul > li > a {
 #cv {
   text-align: center;
 }
+
+.column {
+  display: inline-block;
+}
