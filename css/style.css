@@ -12,10 +12,6 @@ Text On Primary Color (Grey): #f7f8fc;
   box-sizing: border-box;
 }
 
-main {
-  padding-top: 400px;
-}
-
 body {
   font-family: "Rosario", sans-serif;
   background-color: #fafbfc;
@@ -24,17 +20,32 @@ body {
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #020123;
   display: block;
-  max-width: 1440px;
   margin: 0 8px 0 8px; /* No spacing to top and bottom and auto spacing to left and right */
-  padding-top: 250px;
 }
 
-/* 
-  width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-old code cut from body, delete this if not useful */
+main {
+  padding-top: 150px;
+}
 
+header {
+  background-color: #0c1248;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 3px solid #4a4a4a;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #f8f8f8;
+  border: solid #bdbdbd 1px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* base styles */
 h1,
 h2,
 h3,
@@ -71,20 +82,9 @@ a {
   text-decoration: none; /* No underlining */
 }
 
-a:visited {
-  /* visited link */
-  color: white;
-}
-
-a:hover,
-a:focus {
+a:hover {
   color: green;
   text-decoration: underline; /* Underlining when focusing or hovering over a link */
-}
-
-a:active {
-  /* selected link */
-  color: #0c1248;
 }
 
 .button {
@@ -115,23 +115,7 @@ a:active {
   color: #f7f8fc;
 }
 
-div {
-  width: auto;
-  border: 1px solid #c3c3c3;
-  flex-wrap: wrap;
-  align-content: space-around;
-  margin: auto;
-  padding: 8px;
-}
-
-img {
-  max-width: 500px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  align-self: center;
-  margin: auto;
-}
+/* base styling end */
 
 ul.a {
   width: 100%;
@@ -142,23 +126,19 @@ ul.a {
   margin: auto;
 }
 
-header {
-  background-color: #0c1248;
-  display: inline;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 3px solid #4a4a4a;
-  position: fixed;
+#hero img {
+  max-width: 200px;
+}
+
+#myskills img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: #f8f8f8;
-  border: solid #bdbdbd 1px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero
@@ -185,7 +165,7 @@ header {
   /* No spacing to top and bottom and auto spacing to left and right */
 }
 
-/* Layout styling */
+/* Base layout styling */
 
 .container {
   padding: 8px;
@@ -193,15 +173,8 @@ header {
   margin: auto;
 }
 
-.blog {
-  padding: 16px;
-  float: left;
-  background-color: #fafbfc;
-  color: #0c1248;
-}
-
 .row {
-  display: flex;
+  display: inline-block;
   margin: 25px 0;
 }
 
@@ -212,6 +185,13 @@ header {
   margin: 0; /* No spacing to top and bottom and auto spacing to left and right */
   background-color: #0c1248;
   color: #fafbfc;
+}
+
+.blog {
+  padding: 16px;
+  float: left;
+  background-color: #fafbfc;
+  color: #0c1248;
 }
 
 #hero h1 h2 h3 h4 {
@@ -254,7 +234,6 @@ nav > ul > li > a {
 }
 
 .column {
-  flex: 1;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -264,6 +243,17 @@ nav > ul > li > a {
 
 .logo {
   max-width: 150px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* ==============================
@@ -294,6 +284,11 @@ Medium devices (640px and larger)
   }
 }
 
+.social-icons img,
+.social-icons svg {
+  max-width: 50px;
+}
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
@@ -306,13 +301,89 @@ X-large devices (1440px or larger)
 @media only screen and (min-width: 1440px) {
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 10px;
+.maxWidth-1440 {
+  max-width: 1440px;
+  margin: auto;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.maxWidth-700 {
+  max-width: 700px;
+  margin: auto;
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: color-change;
+  animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
