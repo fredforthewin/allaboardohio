@@ -20,18 +20,20 @@ body {
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #020123;
   display: block;
-  margin: 0 8px 0 8px; /* No spacing to top and bottom and auto spacing to left and right */
+  margin: 164px 8px 0 8px; /* Spacing on top for header, 8px on each side, 0 on the bottom */
 }
 
-main {
-  padding-top: 150px;
-}
+/* main {
+  padding-top: 164px;
+} */
 
 header {
   background-color: #0c1248;
   padding: 10px;
-  margin: 0;
+  margin: auto;
   border-bottom: 3px solid #4a4a4a;
+  /* display: flex;
+  flex-direction: column; */
   position: fixed;
   width: 100%;
   height: auto;
@@ -120,8 +122,9 @@ a:hover {
 ul.a {
   width: 100%;
   border: 1px solid #c3c3c3;
-  display: inline;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
   margin: auto;
 }
@@ -138,7 +141,9 @@ ul.a {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style: none;
 }
 
 .hero
@@ -152,16 +157,11 @@ ul.a {
   .prototype
   .conclusion
   .contact {
-  /* display: block;
-  border: 1px solid black;
-  padding: 4px 4px 4px 4px;
-  background: #fafbfc no-repeat fixed center;
-  margin: 4px 4px 4px 4px; */
-
   width: auto;
   flex-wrap: wrap;
   align-content: space-around;
   margin: auto;
+  border-radius: 16px;
   /* No spacing to top and bottom and auto spacing to left and right */
 }
 
@@ -171,6 +171,8 @@ ul.a {
   padding: 8px;
   border: 8px solid rgb(4, 154, 129);
   margin: auto;
+  margin-top: 10px;
+  border-radius: 16px;
 }
 
 .row {
@@ -198,26 +200,33 @@ ul.a {
   text-align: center;
 }
 
-nav {
-  display: inline-block;
+/* nav {
+  display: flex;
+  flex-wrap: wrap;
   width: auto;
-}
+} */
 
-nav > ul > li {
-  display: inline-block;
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav > ul > li > a {
-  padding: 0 15px;
+  padding: 8px;
   text-transform: uppercase;
   font-weight: 700;
   color: #4a4a4a;
+  list-style: none;
+  justify-content: left;
 }
 
 #hero {
   background-color: #147082;
   text-align: center;
   color: #ccc;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 #cv {
@@ -256,23 +265,67 @@ nav > ul > li > a {
   display: table;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.social-icons img,
+.social-icons svg {
+  max-width: 50px;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0px;
+}
+
+.rounded-image {
+  border-radius: 16px; /* Adjust the value to control the amount of rounding */
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+/* End Base Layout Styling */
+
 /* ==============================
-Medium devices (640px and larger)
+Medium devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   body {
     font-size: 18px;
+    border-radius: 16px;
   }
 
   header {
     text-align: unset;
-    padding: 20px 0 13px;
+    padding: 16px 0 12px;
+    display: grid;
   }
 
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
+    margin-right: auto;
   }
 
   #hero span {
@@ -282,14 +335,27 @@ Medium devices (640px and larger)
   .col-md-8 {
     width: 60%;
   }
+
   .col-md-4 {
     width: 40%;
   }
-}
 
-.social-icons img,
-.social-icons svg {
-  max-width: 50px;
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  nav > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
 }
 
 /* ==============================
